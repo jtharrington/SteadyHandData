@@ -1,0 +1,3 @@
+#! /bin/bash
+
+./dist-avg data* | ./clat/src/hist | clat/src/plot -r "set title 'SteadyHandData'; set xlabel 'distance (pixels)'; set ylabel 'count'; set term png; set output 'histogram.png'; set style fill solid" -m "with boxes"

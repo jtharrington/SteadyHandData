@@ -1,0 +1,7 @@
+#! /bin/bash
+
+for file in "${@}"
+do 
+./avg-stddev-10 ${file}
+done | sort -n -k 6 | sed 's/  / \& /g'
+
